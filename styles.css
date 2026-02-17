@@ -1,0 +1,34 @@
+body {
+  background-color: #f8f6f2;
+  font-family: 'Georgia', serif;
+  text-align: center;
+  color: #2a2a2a;
+  margin: 0;
+  padding: 40px;
+}
+
+.title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  font-size: 18px;
+  margin-bottom: 80px;
+  color: #777;
+}
+
+.exhibit {
+  margin: 100px auto;
+  max-width: 800px;
+}
+
+.exhibit img {
+  width: 100%;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+
+.caption {
+  margin-top: 20px;
+}
