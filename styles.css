@@ -545,3 +545,216 @@ body {
   .placard { padding: 36px 28px; }
   .note-card { padding: 40px 28px; }
 }
+
+
+/* ─── LIGHTBOX ───────────────────────────────────── */
+.img-expand-hint {
+  position: absolute;
+  bottom: 0; left: 0; right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.55));
+  color: var(--gold-lt);
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 28px 0 12px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.exhibit-img-wrap:hover .img-expand-hint { opacity: 1; }
+.lightbox-trigger { cursor: zoom-in; }
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(15,11,9,0.95);
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.lightbox.open {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.lightbox-img {
+  max-width: min(90vw, 780px);
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 40px 80px rgba(0,0,0,0.6);
+  transform: scale(0.92);
+  transition: transform 0.4s ease;
+}
+
+.lightbox.open .lightbox-img { transform: scale(1); }
+
+.lightbox-caption {
+  margin-top: 20px;
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+  font-size: 20px;
+  color: var(--gold-lt);
+  opacity: 0.85;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px; right: 28px;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--muted);
+  font-size: 18px;
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: color 0.2s, border-color 0.2s;
+}
+.lightbox-close:hover { color: var(--cream); border-color: var(--gold); }
+
+/* ─── SIGN THE WALL ──────────────────────────────── */
+.wall-section {
+  position: relative;
+  z-index: 1;
+  padding: 80px 24px 60px;
+  text-align: center;
+}
+
+.wall-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 36px;
+  font-weight: 400;
+  color: var(--cream);
+  margin-bottom: 12px;
+}
+
+.wall-sub {
+  font-size: 13px;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  margin-bottom: 32px;
+}
+
+.wall-tools {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.color-swatches {
+  display: flex;
+  gap: 8px;
+}
+
+.swatch {
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
+}
+.swatch:hover { transform: scale(1.15); }
+.swatch.active { border-color: #fff; transform: scale(1.2); }
+
+.brush-sizes {
+  display: flex;
+  gap: 6px;
+}
+
+.brush-btn {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--muted);
+  font-family: 'Jost', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  width: 36px; height: 36px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+.brush-btn:hover, .brush-btn.active {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+#wall-clear {
+  background: transparent;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--muted);
+  font-family: 'Jost', sans-serif;
+  font-size: 10px;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s;
+}
+#wall-clear:hover { border-color: var(--rose); color: var(--rose); }
+
+#wall-canvas {
+  display: block;
+  margin: 0 auto;
+  max-width: 900px;
+  width: 100%;
+  height: 380px;
+  background: #110e0b;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  cursor: crosshair;
+  touch-action: none;
+}
+
+/* ─── BIRTHDAY BUTTON ────────────────────────────── */
+.birthday-btn-section {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 60px 24px 80px;
+}
+
+#birthday-trigger {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 22px;
+  font-style: italic;
+  background: linear-gradient(135deg, #c9a96e, #d4829a);
+  color: #1a1612;
+  border: none;
+  padding: 20px 52px;
+  border-radius: 4px;
+  cursor: pointer;
+  letter-spacing: 0.05em;
+  box-shadow: 0 8px 32px rgba(212,130,154,0.3);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+#birthday-trigger:hover {
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 48px rgba(212,130,154,0.45);
+}
+
+/* ─── CONFETTI CANVAS ────────────────────────────── */
+#confetti-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 999;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+#confetti-canvas.active { opacity: 1; }

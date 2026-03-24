@@ -143,12 +143,43 @@
     <div class="guestbook-entries" id="gb-entries"></div>
   </section>
 
+  
+  <!-- ── SIGN THE WALL ── -->
+  <section class="wall-section">
+    <p class="section-label">The Museum Wall</p>
+    <h2 class="wall-title">Leave Your Mark</h2>
+    <p class="wall-sub">Pick a colour and doodle on the wall *P.S* i'll see everything you leave behind .</p>
+    <div class="wall-tools">
+      <div class="color-swatches">
+        <button class="swatch active" data-color="#d4829a" style="background:#d4829a"></button>
+        <button class="swatch" data-color="#c9a96e" style="background:#c9a96e"></button>
+        <button class="swatch" data-color="#f0c0d0" style="background:#f0c0d0"></button>
+        <button class="swatch" data-color="#e8e0d5" style="background:#e8e0d5"></button>
+        <button class="swatch" data-color="#7ec8b8" style="background:#7ec8b8"></button>
+        <button class="swatch" data-color="#ffffff" style="background:#ffffff"></button>
+      </div>
+      <div class="brush-sizes">
+        <button class="brush-btn active" data-size="3">S</button>
+        <button class="brush-btn" data-size="7">M</button>
+        <button class="brush-btn" data-size="14">L</button>
+      </div>
+      <button id="wall-clear">Clear Wall</button>
+    </div>
+    <canvas id="wall-canvas"></canvas>
+  </section>
+ 
+  <!-- ── BIRTHDAY BUTTON ── -->
+  <section class="birthday-btn-section">
+    <p class="section-label">One Last Thing</p>
+    <button id="birthday-trigger">🎂 It's Chantelle's Birthday!</button>
+  </section>
+ 
   <!-- ── FOOTER ── -->
   <footer class="site-footer">
     <p>The Museum of Chantelle · Est. 2026</p>
     <p><em>All exhibits are original. No reproduction permitted.</em></p>
   </footer>
-
+   
   <script src="scripts.js"></script>
 </body>
 </html>
