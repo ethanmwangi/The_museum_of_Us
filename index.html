@@ -2,40 +2,153 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Museum of Us</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Museum of Chantelle</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <h1 class="title">The Museum of You</h1>
-  <p class="subtitle">Curated with admiration · 2026</p>
+  <!-- Floating petals canvas -->
+  <canvas id="petals"></canvas>
 
-  <section class="exhibit">
-    <img src="images/photo1.jpg" alt="Exhibit I">
-    <div class="caption">
-      <h2>Exhibit I</h2>
-      <p>"The Smile That Started It All"</p>
-      <small>Digital Photography</small>
+  <!-- ── HERO ── -->
+  <header class="hero">
+    <p class="hero-eyebrow">A Private Exhibition · Est. 2026</p>
+    <h1 class="hero-title">The Museum<br><em>of Chantelle</em></h1>
+    <p class="hero-sub">Curated with admiration &amp; a little bit of awe</p>
+    <div class="scroll-hint">↓</div>
+  </header>
+
+  <!-- ── COUNTDOWN ── -->
+  <section class="countdown-section">
+    <p class="section-label">Until the Birthday Exhibition Opens</p>
+    <div class="countdown-grid">
+      <div class="cd-block"><span id="cd-days">--</span><small>Days</small></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><span id="cd-hours">--</span><small>Hours</small></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><span id="cd-mins">--</span><small>Minutes</small></div>
+      <div class="cd-sep">:</div>
+      <div class="cd-block"><span id="cd-secs">--</span><small>Seconds</small></div>
+    </div>
+    <p class="birthday-date">April 5 · 2026</p>
+  </section>
+
+  <!-- ── INTRO PLACARD ── -->
+  <section class="placard-section">
+    <div class="placard">
+      <p class="placard-number">00</p>
+      <h2>Curator's Note</h2>
+      <p>This museum exists because some people are too remarkable to simply exist in the world without being properly documented. Every exhibit here has been chosen with great care — each one a small proof of something the curator has known for a long time: that Chantelle is, simply put, extraordinary.</p>
+      <p><em>— The Curator</em></p>
     </div>
   </section>
 
-  <section class="exhibit">
-    <img src="images/photo2.jpg" alt="Exhibit II">
-    <div class="caption">
-      <h2>Exhibit II</h2>
-      <p>"Effortlessly Iconic"</p>
-      <small>Private Collection</small>
+  <!-- ── GALLERY ── -->
+  <main class="gallery">
+
+    <article class="exhibit" data-num="I">
+      <div class="exhibit-img-wrap">
+        <img src="images/besy_mirror_pic.jpeg" alt="Exhibit I" onerror="this.parentElement.classList.add('no-img')">
+        <div class="img-placeholder"><span>I</span></div>
+      </div>
+      <div class="exhibit-caption">
+        <span class="exhibit-num">Exhibit I</span>
+        <h3>"The Look That Says Everything"</h3>
+        <p>Mirror Series · Private Collection</p>
+      </div>
+    </article>
+
+    <article class="exhibit exhibit-right" data-num="II">
+      <div class="exhibit-img-wrap">
+        <img src="images/collage.jpeg" alt="Exhibit II" onerror="this.parentElement.classList.add('no-img')">
+        <div class="img-placeholder"><span>II</span></div>
+      </div>
+      <div class="exhibit-caption">
+        <span class="exhibit-num">Exhibit II</span>
+        <h3>"Good Company, Great Energy"</h3>
+        <p>Candid Series · Ongoing Exhibition</p>
+      </div>
+    </article>
+
+    <article class="exhibit" data-num="III">
+      <div class="exhibit-img-wrap">
+        <img src="images/LA_W____E_C.jpeg" alt="Exhibit III" onerror="this.parentElement.classList.add('no-img')">
+        <div class="img-placeholder"><span>III</span></div>
+      </div>
+      <div class="exhibit-caption">
+        <span class="exhibit-num">Exhibit III</span>
+        <h3>"Love Always"</h3>
+        <p>Found Object &amp; Portrait · 2025</p>
+      </div>
+    </article>
+
+    <article class="exhibit exhibit-right" data-num="IV">
+      <div class="exhibit-img-wrap">
+        <img src="images/Mirror_pic.jpeg" alt="Exhibit IV" onerror="this.parentElement.classList.add('no-img')">
+        <div class="img-placeholder"><span>IV</span></div>
+      </div>
+      <div class="exhibit-caption">
+        <span class="exhibit-num">Exhibit IV</span>
+        <h3>"Effortlessly Radiant"</h3>
+        <p>Mirror Series Vol. II · Natural Light</p>
+      </div>
+    </article>
+
+    <article class="exhibit" data-num="V">
+      <div class="exhibit-img-wrap">
+        <img src="images/SILLY.jpeg" alt="Exhibit V" onerror="this.parentElement.classList.add('no-img')">
+        <div class="img-placeholder"><span>V</span></div>
+      </div>
+      <div class="exhibit-caption">
+        <span class="exhibit-num">Exhibit V</span>
+        <h3>"The Laugh They Should Study"</h3>
+        <p>Unguarded Moment · Permanent Collection</p>
+      </div>
+    </article>
+
+    
+
+    
+
+  </main>
+
+  <!-- ── LOVE NOTE ── -->
+  <section class="note-section">
+    <div class="note-inner">
+      <p class="section-label">A Message From The Curator</p>
+      <div class="note-card">
+        <p class="note-drop">"</p>
+        <!-- ✏️  REPLACE THIS with your personal message to Chantelle -->
+        <p>Dear Chantelle,</p>
+        <p>If I had to put it into words — and clearly I tried, because here we are, a whole museum — I'd say that you make ordinary moments feel worth remembering. The way you laugh. The way you move through a room. The way you probably have no idea how much you light things up just by being there.</p>
+        <p>This isn't just a birthday gift. It's documentation. Evidence. A small archive of the fact that you are, without question, someone worth paying attention to.</p>
+        <p>Happy birthday. You deserve every good thing.</p>
+        <p class="note-sign">With admiration,<br><em>— The Curator</em></p>
+      </div>
     </div>
   </section>
 
-  <section class="exhibit">
-    <img src="images/photo3.jpg" alt="Exhibit III">
-    <div class="caption">
-      <h2>Exhibit III</h2>
-      <p>"A Moment Worth Framing"</p>
-      <small>Ongoing Exhibition</small>
+  <!-- ── GUESTBOOK ── -->
+  <section class="guestbook-section">
+    <p class="section-label">Visitor Guestbook</p>
+    <h2 class="guestbook-title">Leave a Message for the Exhibit</h2>
+    <div class="guestbook-form">
+      <input type="text" id="gb-name" placeholder="Your name" maxlength="40">
+      <textarea id="gb-msg" placeholder="Leave a birthday wish or a note for Chantelle..." maxlength="300"></textarea>
+      <button id="gb-submit">Sign the Guestbook</button>
     </div>
+    <div class="guestbook-entries" id="gb-entries"></div>
   </section>
 
+  <!-- ── FOOTER ── -->
+  <footer class="site-footer">
+    <p>The Museum of Chantelle · Est. 2026</p>
+    <p><em>All exhibits are original. No reproduction permitted.</em></p>
+  </footer>
+
+  <script src="scripts.js"></script>
 </body>
 </html>
