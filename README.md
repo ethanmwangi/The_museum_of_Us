@@ -37,13 +37,13 @@ The_museum_of_Us/
 
 ---
 
-## 🚀 Deployed On
+ Deployed On
 
 [Vercel](https://vercel.com) — live at [the-museum-of-us-nine.vercel.app](https://the-museum-of-us-nine.vercel.app)
 
 ---
 
-## 🛠️ Built With
+ Built With
 
 - HTML5
 - CSS3 — custom properties, keyframe animations, grid layout
