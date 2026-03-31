@@ -47,7 +47,7 @@ The_museum_of_Us/
 
 - HTML5
 - CSS3 — custom properties, keyframe animations, grid layout
-- Vanilla JavaScript — Canvas API, IntersectionObserver, localStorage
+- JavaScript — Canvas API, IntersectionObserver, localStorage
 - Google Fonts — Cormorant Garamond & Jost
 
 ---
